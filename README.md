@@ -16,7 +16,7 @@
 
 </details>
 
-TO INSTALL
+**TO INSTALL**
 ```python
 mkdir -p ~/drone/src
 cd drone/src
@@ -25,10 +25,15 @@ cd ..
 colcon build --symlink-install
 ```
 
-TO RUN
+**TO RUN**
 
 ```python
 source drone/install/setup.bash
 ros2 launch drone_bringup drone_launch_sim.py
-ros2 launch drone_bringup drone_survey.launch.py
+```
+
+**To run either _slam_toolbox_ or _rtabmap_**
+```python
+ros2 launch drone_bringup drone_survey.launch.py slam_type:=drone_slam.launch.py
+ros2 launch drone_bringup drone_survey.launch.pt slam_type:=drone_rtab.launch.py
 ```
